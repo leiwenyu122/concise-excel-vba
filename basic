@@ -1,0 +1,12 @@
+1.COPY function:
+#将Sheet1复制然后粘贴到Sheet3之后#
+Worksheets("Sheet1").Copy After:=Worksheets("Sheet3")
+
+
+Sub copy1()
+Dim r As Range, d As Range
+Set r = Sheets("sheet1").Range("a1:f10") #要复制的单元格
+Set d = Sheets("sheet2").Range("a1") #要复制到的位置
+r.Copy Destination:=d
+End Sub
+

@@ -1,0 +1,34 @@
+#Select and offset function 
+Sub select1()
+Range("A1").Select
+Selection.offset(1,0).Select   #是在A1格的向下一个单位，向右0个单位
+End Sub
+
+Method             Arguments
+------------------------------------------
+Activate           none
+Cells              rowIndex, columnIndex
+Application.Goto   reference, scroll
+Offset             rowOffset, columnOffset
+Range              cell1
+                   cell1, cell2
+Resize             rowSize, columnSize
+Select             none
+Sheets             index (or sheetName)
+Workbooks          index (or bookName)
+End                direction
+CurrentRegion      none
+
+
+ActiveSheet.Cells(5, 4).Select
+-or-
+ActiveSheet.Range("D5").Select
+
+Sheets("Sheet2").Activate
+ActiveSheet.Cells(6, 5).Select
+
+Workbooks("BOOK2.XLS").Sheets("Sheet1").Activate
+ActiveSheet.Cells(7, 6).Select
+
+ActiveSheet.Range("C2:D10").Select
+Range(Cells(2, 3), Cells(10, 4)).Select

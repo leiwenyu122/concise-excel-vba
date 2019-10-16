@@ -1,0 +1,18 @@
+1.create variables 
+Sub newvariables()
+  newitem = inputbox("Type the file name")  #如果你不想设置为input的话，可以：Dim newitem as string,之后再将value 设置为具体的数值
+  Worksheets("Sheet1").activate
+  Range ("B2").End(xlDown).Offset(1,0).Select
+  ActivteCell.Value = newitem
+  MsgBox newitem & "has been added to this list"
+End Sub
+
+
+2. How to create Msgbox?
+#create a simple msgbox with the mark, date and seperate it to two lines
+Msgbox " Do you like apples that are produced on " & Date "?" vbNewLine & "Are you sure?", vbQuestion + vbYesNo,"Food question"
+
+# Store the answers of the question
+
+
+
